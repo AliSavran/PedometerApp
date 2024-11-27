@@ -1,0 +1,21 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.alisavran.pedometerapp.LoginFragment"
+        android:label="Giriş"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_pedometerFragment"
+            app:destination="@id/pedometerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pedometerFragment"
+        android:name="com.alisavran.pedometerapp.PedometerFragment"
+        android:label="Adım Sayar"
+        tools:layout="@layout/fragment_pedometer" />
+</navigation>
